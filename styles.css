@@ -4,7 +4,7 @@
     --light-pink: #F5E0E0;
     font-size: 16px;
     --body-size: 16px;
-    --header-multiplier: 0.4;
+    --header-multiplier: 0.45;
     --base-padding: 16px;
     --blob-unit: calc(100vw / 6);
 }
@@ -24,11 +24,13 @@ main .row {
     display: flex;
     flex-direction: row;
     gap: calc(2 * var(--base-padding));
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-image {
-    height: 150px;
-    width: 150px;
+    height: 75px;
+    width: 75px;
     border-radius: 250px;
 }
 
@@ -52,7 +54,7 @@ main .column.hug-items {
 
 main h2 {
     font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
-    font-size: calc(2.75rem * var(--header-multiplier));
+    font-size: calc(3rem * var(--header-multiplier));
     font-weight: 500;
     color: #6e6159;
     margin: 0;
@@ -66,15 +68,38 @@ main p {
 }
 
 main p.large-text {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 
 h1 {
     font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
 }
 
+.row.stack-sm {
+    flex-direction: column;
+    gap: calc(0px);
+}
+
+.row.stack-sm .column:nth-child(1) {
+    padding-bottom: 0;
+}
+
 .column {
     width: 100%;
+}
+
+footer {
+    padding: var(--base-padding);
+    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
+}
+
+footer p {
+    margin: 0;
+}
+
+#copyright {
+    font-weight: 500;
+    color: #7e6f69;
 }
 
 header {
@@ -422,7 +447,7 @@ nav .menu-button:hover:before {
 
 #hero-text-container {
     position: relative;
-    width: 13em;
+    width: 14em;
 }
 
 .hero h1 {
@@ -733,6 +758,11 @@ body.no-animation .hero .hero-background {
     #hero-text-container {
         width: 24em;
     }
+
+    .profile-image {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -762,6 +792,16 @@ body.no-animation .hero .hero-background {
 
     #hero-text-container {
         width: 27em;
+    }
+
+    .profile-image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .row.stack-sm {
+        flex-direction: row;
+        gap: calc(2*var(--base-padding));
     }
 }
 
