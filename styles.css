@@ -4,7 +4,7 @@
     --light-pink: #F5E0E0;
     font-size: 16px;
     --body-size: 16px;
-    --header-multiplier: 0.5;
+    --header-multiplier: 0.6;
     --base-padding: 16px;
     --blob-unit: calc(100vw / 6);
 }
@@ -12,6 +12,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -663,7 +664,6 @@ body.no-animation .hero .hero-background {
     height: 44px;
     position: absolute;
     top: calc(100% - 52px);
-    right: calc(var(--base-padding) - 24px);
     color: #814343;
     z-index: 3;
     font-size: 0.95rem;
@@ -672,6 +672,7 @@ body.no-animation .hero .hero-background {
     font-weight: 400;
     transition: all 0.3s;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 #no-animation:hover {
@@ -700,6 +701,10 @@ body.no-animation .hero .hero-background {
 
     .hero {
         height: 650px;
+    }
+
+    #no-animation {
+        right: calc( max((var(--base-padding) - 24px), 0px));
     }
 }
 
