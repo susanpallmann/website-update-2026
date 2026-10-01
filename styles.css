@@ -4,7 +4,7 @@
     --light-pink: #F5E0E0;
     font-size: 16px;
     --body-size: 16px;
-    --header-multiplier: 0.6;
+    --header-multiplier: 0.4;
     --base-padding: 16px;
     --blob-unit: calc(100vw / 6);
 }
@@ -420,8 +420,9 @@ nav .menu-button:hover:before {
     position: relative;
 }
 
-.hero #hero-text-container {
+#hero-text-container {
     position: relative;
+    width: 13em;
 }
 
 .hero h1 {
@@ -686,6 +687,28 @@ body.no-animation .hero .hero-background {
     100% { transform: translateY(100vh) scaleX(100%) scaleY(105%) }
 }
 
+@media screen and (min-width: 329px) {
+    :root {
+        font-size: 16px;
+        --body-size: 16px;
+        --header-multiplier: 0.6;
+        --base-padding: 16px;
+        --blob-unit: calc(100vw / 6);
+    }
+
+    .blob:nth-child(5), .blob:nth-child(6) {
+        display: block;
+    }
+
+    .hero {
+        height: 650px;
+    }
+
+    #hero-text-container {
+        width: 19em;
+    }
+}
+
 @media screen and (min-width: 480px) {
     :root {
         font-size: 16px;
@@ -705,6 +728,10 @@ body.no-animation .hero .hero-background {
 
     #no-animation {
         right: calc( max((var(--base-padding) - 24px), 0px));
+    }
+
+    #hero-text-container {
+        width: 24em;
     }
 }
 
@@ -731,6 +758,16 @@ body.no-animation .hero .hero-background {
 
     .hero {
         height: 700px;
+    }
+
+    #hero-text-container {
+        width: 27em;
+    }
+}
+
+@media screen and (min-width: 865px) {
+    #hero-text-container {
+        width: auto;
     }
 }
 
