@@ -1,37 +1,34 @@
 :root {
+    /* Colors */
     --brand-pink: #FF5757;
     --pale-pink: #FBCACA;
     --light-pink: #F5E0E0;
+
+    /* Fonts */
     font-size: 16px;
     --body-size: 16px;
     --header-multiplier: 0.45;
+
+    /* Spacing */
     --base-padding: 16px;
+
+    /* Sizing */
     --blob-unit: calc(100vw / 6);
 }
 
-html, body {
+/* Page structure */
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     position: relative;
     background-color: #f1ede5;
-}
-
-main .row {
-    display: flex;
-    flex-direction: row;
-    gap: calc(2 * var(--base-padding));
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-image {
-    height: 75px;
-    width: 75px;
-    border-radius: 250px;
 }
 
 main {
@@ -40,19 +37,46 @@ main {
     margin: auto;
 }
 
-main .column {
-    padding: var(--base-padding) 0;
+/* Column layout */
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: calc(2 * var(--base-padding));
+    justify-content: center;
+    align-items: center;
 }
 
-main .column.align-vertical {
+.row.stack-sm {
+    flex-direction: column;
+    gap: calc(0px);
+}
+
+.row.stack-sm .column {
+    padding-bottom: 0;
+}
+
+main .column {
+    padding: calc(1 * var(--base-padding)) 0;
+}
+
+.column.align-vertical {
     align-content: center;
 }
 
-main .column.hug-items {
+.column.hug-items {
     width: fit-content;
 }
 
-main h2 {
+.column {
+    width: 100%;
+}
+
+/* Font styles */
+h1 {
+    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
+}
+
+h2 {
     font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
     font-size: calc(3rem * var(--header-multiplier));
     font-weight: 500;
@@ -61,47 +85,23 @@ main h2 {
     margin-bottom: 1rem;
 }
 
-main p {
+p {
     font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
     color: #7e6f69;
     margin: 0;
 }
 
-main p.large-text {
+.intro p {
     font-size: 1.25em;
 }
 
-h1 {
-    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
+.profile-image {
+    height: 75px;
+    width: 75px;
+    border-radius: 250px;
 }
 
-.row.stack-sm {
-    flex-direction: column;
-    gap: calc(0px);
-}
-
-.row.stack-sm .column:nth-child(1) {
-    padding-bottom: 0;
-}
-
-.column {
-    width: 100%;
-}
-
-footer {
-    padding: var(--base-padding);
-    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
-}
-
-footer p {
-    margin: 0;
-}
-
-#copyright {
-    font-weight: 500;
-    color: #7e6f69;
-}
-
+/* Header */
 header {
     position: sticky;
     overflow: hidden;
@@ -420,6 +420,22 @@ nav .menu-button:hover:before {
     color: #6e1306;
 }
 
+/* Footer */
+footer {
+    padding: var(--base-padding);
+    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
+}
+
+footer p {
+    margin: 0;
+}
+
+#copyright {
+    font-weight: 500;
+    color: #7e6f69;
+}
+
+/* Hero */
 .hero {
     display: flex;
     justify-content: center;
@@ -507,17 +523,7 @@ body.no-animation .hero #happy-svg {
     animation: wave 2s 0s linear infinite alternate-reverse;
 }
 
-@keyframes wave {
-    0%   { transform: translateY(15.2%) }
-    10%  { transform: translateY(16.2%) }
-    25%  { transform: translateY(19.4%) }
-    75%  { transform: translateY(29.6%) }
-    90%  { transform: translateY(32.8%) }
-    100% { transform: translateY(33.8%) }
-}
-
-
-
+/* Lava lamp effect */
 #lava-lamp-container {
     position: absolute;
     height: 100%;
@@ -567,6 +573,7 @@ body.no-animation .hero #happy-svg {
     mix-blend-mode: color-dodge;
     pointer-events: none;
 }
+
 .filter-burn {
     position: absolute;
     height: 100%;
@@ -682,7 +689,7 @@ body.no-animation .hero .hero-background {
     top: calc(100% + 50px);
 }
 
-#no-animation {
+button#no-animation {
     background: transparent;
     border: none;
     outline: none;
@@ -701,9 +708,19 @@ body.no-animation .hero .hero-background {
     box-sizing: border-box;
 }
 
-#no-animation:hover {
+button#no-animation:hover {
     background-color: rgba(255, 117, 117, 0.15);
     color: #6e1306;
+}
+
+/* Animations */
+@keyframes wave {
+    0%   { transform: translateY(15.2%) }
+    10%  { transform: translateY(16.2%) }
+    25%  { transform: translateY(19.4%) }
+    75%  { transform: translateY(29.6%) }
+    90%  { transform: translateY(32.8%) }
+    100% { transform: translateY(33.8%) }
 }
 
 @keyframes blob-move {
@@ -712,6 +729,7 @@ body.no-animation .hero .hero-background {
     100% { transform: translateY(100vh) scaleX(100%) scaleY(105%) }
 }
 
+/* Small screens */
 @media screen and (min-width: 329px) {
     :root {
         font-size: 16px;
@@ -734,10 +752,9 @@ body.no-animation .hero .hero-background {
     }
 }
 
+/* Medium screens */
 @media screen and (min-width: 480px) {
     :root {
-        font-size: 16px;
-        --body-size: 16px;
         --header-multiplier: 0.75;
         --base-padding: 30px;
         --blob-unit: calc(100vw / 10);
@@ -751,7 +768,7 @@ body.no-animation .hero .hero-background {
         height: 650px;
     }
 
-    #no-animation {
+    button#no-animation {
         right: calc( max((var(--base-padding) - 24px), 0px));
     }
 
@@ -767,10 +784,7 @@ body.no-animation .hero .hero-background {
 
 @media screen and (min-width: 768px) {
     :root {
-        font-size: 16px;
-        --body-size: 16px;
         --header-multiplier: 0.85;
-        --base-padding: 30px;
         --blob-unit: calc(100vw / 17);
     }
 
@@ -799,12 +813,17 @@ body.no-animation .hero .hero-background {
         width: 150px;
     }
 
+    main .column {
+        padding: calc(2 * var(--base-padding)) 0;
+    }
+
     .row.stack-sm {
         flex-direction: row;
         gap: calc(2*var(--base-padding));
     }
 }
 
+/* Large screens */
 @media screen and (min-width: 865px) {
     #hero-text-container {
         width: auto;
@@ -813,10 +832,7 @@ body.no-animation .hero .hero-background {
 
 @media screen and (min-width: 1100px) {
     :root {
-        font-size: 16px;
-        --body-size: 16px;
         --header-multiplier: 1;
-        --base-padding: 30px;
         --blob-unit: calc(100vw / 19.2);
     }
 
@@ -825,15 +841,8 @@ body.no-animation .hero .hero-background {
     }
 }
 
+/* Very large screens */
 @media screen and (min-width: 1500px) {
-    :root {
-        font-size: 16px;
-        --body-size: 16px;
-        --header-multiplier: 1;
-        --base-padding: 30px;
-        --blob-unit: calc(100vw / 19.2);
-    }
-
     .hero {
         height: 800px;
     }
