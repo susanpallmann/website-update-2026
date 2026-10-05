@@ -681,7 +681,7 @@ body.no-animation #hero-redesign #lava-lamp-container {
     display: none;
 }
 
-body.no-animation #hero-redesign .hero .hero-background {
+body.no-animation #hero-redesign.hero .hero-background {
     background: linear-gradient(#ffc9c9, #ffb4b4)
 }
 
