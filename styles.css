@@ -743,15 +743,15 @@ body.no-animation #hero-redesign .hero .hero-background {
         --blob-unit: calc(100vw / 6);
     }
 
-    .blob:nth-child(5), .blob:nth-child(6) {
+    #hero-redesign .blob:nth-child(5), #hero-redesign .blob:nth-child(6) {
         display: block;
     }
 
-    .hero {
+    #hero-redesign.hero {
         height: 650px;
     }
 
-    #hero-text-container {
+    #hero-redesign #hero-text-container {
         width: 19em;
     }
 }
@@ -764,19 +764,19 @@ body.no-animation #hero-redesign .hero .hero-background {
         --blob-unit: calc(100vw / 10);
     }
 
-    .blob:nth-child(5), .blob:nth-child(6) {
+    #hero-redesign .blob:nth-child(5), #hero-redesign .blob:nth-child(6) {
         display: block;
     }
 
-    .hero {
+    #hero-redesign .hero {
         height: 650px;
     }
 
-    button#no-animation {
+    #hero-redesign button#no-animation {
         right: calc( max((var(--base-padding) - 24px), 0px));
     }
 
-    #hero-text-container {
+    #hero-redesign #hero-text-container {
         width: 24em;
     }
 
@@ -792,7 +792,7 @@ body.no-animation #hero-redesign .hero .hero-background {
         --blob-unit: calc(100vw / 17);
     }
 
-    .blob:nth-child(7), .blob:nth-child(8) {
+    #hero-redesign .blob:nth-child(7), #hero-redesign .blob:nth-child(8) {
         display: block;
     }
 
@@ -804,11 +804,11 @@ body.no-animation #hero-redesign .hero .hero-background {
         display: flex;
     }
 
-    .hero {
+    #hero-redesign.hero {
         height: 700px;
     }
 
-    #hero-text-container {
+    #hero-redesign #hero-text-container {
         width: 27em;
     }
 
@@ -829,7 +829,7 @@ body.no-animation #hero-redesign .hero .hero-background {
 
 /* Large screens */
 @media screen and (min-width: 865px) {
-    #hero-text-container {
+    #hero-redesign #hero-text-container {
         width: auto;
     }
 }
@@ -840,14 +840,14 @@ body.no-animation #hero-redesign .hero .hero-background {
         --blob-unit: calc(100vw / 19.2);
     }
 
-    .hero {
+    #hero-redesign.hero {
         height: 700px;
     }
 }
 
 /* Very large screens */
 @media screen and (min-width: 1500px) {
-    .hero {
+    #hero-redesign.hero {
         height: 800px;
     }
 }
