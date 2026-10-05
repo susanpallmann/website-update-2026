@@ -3,9 +3,9 @@
 ## To do:
 
 ### Visual updates:
-- [ ] Add new lava lamp hero
-- [ ] Add new header
-- [ ] Add about me section to homepage
+- [X] Add new lava lamp hero
+- [X] Add new header
+- [X] Add about me section to homepage
 - [ ] Update case study display
 - [ ] Hide old case studies
 - [ ] Update end of case studies sections
