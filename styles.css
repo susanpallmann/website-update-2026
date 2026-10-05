@@ -436,7 +436,11 @@ footer p {
 }
 
 /* Hero */
-.hero {
+#hero-redesign h1 {
+    font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
+}
+
+#hero-redesign.hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,7 +452,7 @@ footer p {
     position: relative;
 }
 
-.hero .hero-background {
+#hero-redesign.hero .hero-background {
     height: 100%;
     width: 100%;
     display: flex;
@@ -461,12 +465,12 @@ footer p {
     position: relative;
 }
 
-#hero-text-container {
+#hero-redesign #hero-text-container {
     position: relative;
     width: 14em;
 }
 
-.hero h1 {
+#hero-redesign.hero h1 {
     position: relative;
     font-size: calc(5.25rem * var(--header-multiplier));
     font-weight: 500;
@@ -475,11 +479,11 @@ footer p {
     z-index: 2;
 }
 
-.hero h1 #happy-text {
+#hero-redesign.hero h1 #happy-text {
     color: rgba(255, 255, 255, 0.00001);
 }
 
-.hero #happy-svg {
+#hero-redesign.hero #happy-svg {
     position: absolute;
     font-size: calc(5.25rem * var(--header-multiplier));
     left: calc(1em * 3.0625);
@@ -490,41 +494,41 @@ footer p {
     height: 1.88095em;
 }
 
-body.no-animation .hero h1 #happy-text {
+body.no-animation #hero-redesign.hero h1 #happy-text {
     color: var(--brand-pink);
 }
 
-body.no-animation .hero #happy-svg {
+body.no-animation #hero-redesign.hero #happy-svg {
     display: none;
 }
 
-#happy-svg path {
+#hero-redesign #happy-svg path {
     fill: var(--brand-pink);
     font-size: calc(5.25rem * var(--header-multiplier));
 }
 
-#happy-h {
+#hero-redesign #happy-h {
     animation: wave 2s -1.5s linear infinite alternate-reverse;
 }
 
-#happy-a {
+#hero-redesign #happy-a {
     animation: wave 2s -1.125s linear infinite alternate-reverse;
 }
 
-#happy-p1 {
+#hero-redesign #happy-p1 {
     animation: wave 2s -0.75s linear infinite alternate-reverse;
 }
 
-#happy-p2 {
+#hero-redesign #happy-p2 {
     animation: wave 2s -0.375s linear infinite alternate-reverse;
 }
 
-#happy-y {
+#hero-redesign #happy-y {
     animation: wave 2s 0s linear infinite alternate-reverse;
 }
 
 /* Lava lamp effect */
-#lava-lamp-container {
+#hero-redesign #lava-lamp-container {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -538,7 +542,7 @@ body.no-animation .hero #happy-svg {
     mix-blend-mode: screen;
 }
 
-#lava-lamp-container:after {
+#hero-redesign #lava-lamp-container:after {
     content: "";
     position: absolute;
     background-color: rgba(255, 255, 255, 0.01);
@@ -551,7 +555,7 @@ body.no-animation .hero #happy-svg {
     pointer-events: none;
 }
 
-#lava-blobs {
+#hero-redesign #lava-blobs {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -562,7 +566,7 @@ body.no-animation .hero #happy-svg {
 
 }
 
-.filter-dodge {
+#hero-redesign .filter-dodge {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -574,7 +578,7 @@ body.no-animation .hero #happy-svg {
     pointer-events: none;
 }
 
-.filter-burn {
+#hero-redesign .filter-burn {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -586,7 +590,7 @@ body.no-animation .hero #happy-svg {
     pointer-events: none;
 }
 
-.blob {
+#hero-redesign .blob {
     position: absolute;
     background-color: #000;
     border-radius: 200px;
@@ -594,7 +598,7 @@ body.no-animation .hero #happy-svg {
     min-width: 100px;
 }
 
-.blob:nth-child(1) {
+#hero-redesign .blob:nth-child(1) {
     height: calc(var(--blob-unit) * 3);
     width: calc(var(--blob-unit) * 3);
     transform: translateY(100vh);
@@ -603,7 +607,7 @@ body.no-animation .hero #happy-svg {
     animation-delay: -2s;
 }
 
-.blob:nth-child(2) {
+#hero-redesign .blob:nth-child(2) {
     height: calc(var(--blob-unit) * 1.5);
     width: calc(var(--blob-unit) * 1.5);
     transform: translateY(100vh);
@@ -612,7 +616,7 @@ body.no-animation .hero #happy-svg {
     animation-delay: -3s;
 }
 
-.blob:nth-child(3) {
+#hero-redesign .blob:nth-child(3) {
     height: calc(var(--blob-unit) * 2);
     width: calc(var(--blob-unit) * 2);
     transform: translateY(100vh);
@@ -620,7 +624,7 @@ body.no-animation .hero #happy-svg {
     animation: blob-move 28s ease-in-out infinite;
 }
 
-.blob:nth-child(4) {
+#hero-redesign .blob:nth-child(4) {
     height: calc(var(--blob-unit) * 3);
     width: calc(var(--blob-unit) * 3);
     transform: translateY(100vh);
@@ -629,7 +633,7 @@ body.no-animation .hero #happy-svg {
     animation-delay: -1s;
 }
 
-.blob:nth-child(5) {
+#hero-redesign .blob:nth-child(5) {
     height: var(--blob-unit);
     width: var(--blob-unit);
     transform: translateY(100vh);
@@ -639,7 +643,7 @@ body.no-animation .hero #happy-svg {
     display: none;
 }
 
-.blob:nth-child(6) {
+#hero-redesign .blob:nth-child(6) {
     height: calc(var(--blob-unit) * 2.5);
     width: calc(var(--blob-unit) * 2.5);
     transform: translateY(100vh);
@@ -649,7 +653,7 @@ body.no-animation .hero #happy-svg {
     display: none;
 }
 
-.blob:nth-child(7) {
+#hero-redesign .blob:nth-child(7) {
     height: var(--blob-unit);
     width: var(--blob-unit);
     transform: translateY(100vh);
@@ -659,7 +663,7 @@ body.no-animation .hero #happy-svg {
     display: none;
 }
 
-.blob:nth-child(8) {
+#hero-redesign .blob:nth-child(8) {
     height: calc(var(--blob-unit) * 3.25);
     width: calc(var(--blob-unit) * 3.25);
     transform: translateY(100vh);
@@ -669,19 +673,19 @@ body.no-animation .hero #happy-svg {
     display: none;
 }
 
-body.no-animation .blob {
+body.no-animation #hero-redesign .blob {
     animation: none;
 }
 
-body.no-animation #lava-lamp-container {
+body.no-animation #hero-redesign #lava-lamp-container {
     display: none;
 }
 
-body.no-animation .hero .hero-background {
+body.no-animation #hero-redesign .hero .hero-background {
     background: linear-gradient(#ffc9c9, #ffb4b4)
 }
 
-.lava-floor {
+#hero-redesign .lava-floor {
     position: absolute;
     background-color: #000;
     width: 100%;
@@ -689,7 +693,7 @@ body.no-animation .hero .hero-background {
     top: calc(100% + 50px);
 }
 
-button#no-animation {
+#hero-redesign button#no-animation {
     background: transparent;
     border: none;
     outline: none;
@@ -708,7 +712,7 @@ button#no-animation {
     box-sizing: border-box;
 }
 
-button#no-animation:hover {
+#hero-redesign button#no-animation:hover {
     background-color: rgba(255, 117, 117, 0.15);
     color: #6e1306;
 }
