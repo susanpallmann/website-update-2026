@@ -102,7 +102,7 @@ p {
 }
 
 /* Header */
-header {
+header#new-header {
     position: sticky;
     overflow: hidden;
     box-sizing: border-box;
@@ -111,11 +111,11 @@ header {
     transition: background-color 0.45s;
 }
 
-header:hover{
+header#new-header:hover{
     background-color: rgba(248, 171, 171, 0.25);
 }
 
-header:before {
+header#new-header:before {
     content: "";
     background-color: var(--pale-pink);
     opacity: 0.8;
@@ -126,7 +126,7 @@ header:before {
     blur: 20px;
 }
 
-header .header-container {
+header#new-header .header-container {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -135,28 +135,28 @@ header .header-container {
     z-index: 2;
 }
 
-header .header-container .column {
+header#new-header .header-container .column {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-header .header-container .column:nth-child(2) {
+header#new-header .header-container .column:nth-child(2) {
     justify-content: right;
 }
 
-header #header-logo {
+header#new-header #header-logo {
     cursor: pointer;
 }
 
-header nav {
+header#new-header nav {
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: center;
 }
 
-header #desktop-menu ul {
+header#new-header #desktop-menu ul {
     list-style: none;
     display: none;
     flex-direction: row;
@@ -165,7 +165,7 @@ header #desktop-menu ul {
     height: 44px;
 }
 
-header nav ul li {
+header#new-header nav ul li {
     height: 44px;
     font-family: "Host Grotesk", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
@@ -180,11 +180,11 @@ header nav ul li {
     transition: color 0.25s ease-in-out;
 }
 
-header nav ul li:hover {
+header#new-header nav ul li:hover {
     color: #6e1306;
 }
 
-header nav ul li {
+header#new-header nav ul li {
     border-radius: 100px;
     position: relative;
     overflow: hidden;
@@ -193,7 +193,7 @@ header nav ul li {
     justify-content: center;
 }
 
-header nav ul li:before {
+header#new-header nav ul li:before {
     height: 0px;
     width: 0px;
     border-radius: 150px;
@@ -203,20 +203,20 @@ header nav ul li:before {
     transition: all 0.4s ease-in-out;
 }
 
-header nav ul li:hover:before {
+header#new-header nav ul li:hover:before {
     height: 150px;
     width: 150px;
     background-color: rgba(255, 117, 117, 0.1);
 }
 
-body.no-animation header nav ul li:before {
+body.no-animation header#new-header nav ul li:before {
     height: 150px;
     width: 150px;
     background-color: rgba(255, 117, 117, 0);
     transition: all 0.2s ease-in-out;
 }
 
-body.no-animation header nav ul li:hover:before {
+body.no-animation header#new-header nav ul li:hover:before {
     height: 150px;
     width: 150px;
     background-color: rgba(255, 117, 117, 0.1);
@@ -800,7 +800,7 @@ body.no-animation #hero-redesign.hero .hero-background {
         display: none;
     }
 
-    header #desktop-menu ul {
+    header#new-header #desktop-menu ul {
         display: flex;
     }
 
