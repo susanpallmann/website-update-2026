@@ -6,9 +6,11 @@
 - [X] Add new lava lamp hero
 - [X] Add new header
 - [X] Add about me section to homepage
-- [ ] Update case study display
+- [ ] Update case study display on homepage
+- [ ] Update page color (and check for issues w/image backgrounds)
+- [ ] Update header styles
 - [ ] Hide old case studies
-- [ ] Update end of case studies sections
+- [ ] Update end of case study sections
 
 ### Content updates:
 - [ ] Finish "Find Care" case study
